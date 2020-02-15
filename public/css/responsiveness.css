@@ -1,0 +1,189 @@
+
+
+/* tablet device */
+/* @media only screen and (min-width: 480px) {
+  div.index-page div.white-text.darken-3 {
+    margin-top: -61% !important;
+  }
+} */
+
+/* mobile device */
+
+@media only screen and (max-width: 600px) {
+  #app > div > div > div > h4   {
+    font-size: 1.4rem;
+  }
+  #admin > main > div > div > div > div > a > button {
+    font-size: 7px;
+    padding: 0 9px;
+  }
+  #candidatePracticeTest > main > div > div > div > div:nth-child(3) > form {
+    margin-top: 2rem;
+  }
+  div.registerCandidate > div.registrationPanel > div > div.col.s12.m8.white.offset-m1 {
+    margin-top: 1rem !important;
+  }
+  div.registrationInstructions > div.row {
+    padding-top: 14% !important;
+  }
+  .carousel {
+    height: 300px !important;
+  }
+  html, body {
+    font-size: 13px !important
+  }
+  
+  div.contact-page > div:nth-child(2) > div {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 13% !important;
+  }
+  div.header-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0% !important;
+  }
+  div.pmgc_news > div.animated.bounceInDown > div {
+    top: 10% !important;
+  }
+  div.index-page div.white-text.darken-3 {
+    /* margin-top: -44rem !important; */
+  }
+  div.about-pmgc .arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #263238;
+    position: absolute;
+    left: 3.7% !important;
+  }
+  div.about-pmgc > div.header-text.text-center.center-align {
+    top: 14% !important;
+  }
+  div.contact-page > div.row > div.animated.bounceInDown > div {
+    top: 12% !important;
+  }
+
+}
+
+/* Tablet device */
+@media only screen and (min-width: 200px) and (max-width: 800px) {
+  #collapsibleCandidate > li > div.collapsible-body > div > div > div > div.card-image > h6 {
+    font-size: 14px;
+  }
+  #collapsibleCandidate > li > div.collapsible-header > small {
+    margin-left: auto;
+    font-size: 10px;
+    line-height: 22px;
+    height: 22px;
+    padding: 0 10px;
+  }
+  #collapsibleCandidate > li.active > div.collapsible-body > div > div > div > div.card-content > div > div > a {
+    margin-left: auto;
+    font-size: 10px;
+    line-height: 22px;
+    height: 22px;
+    padding: 0 10px;
+  }
+  #collapsibleCandidate > li.active > div.collapsible-body > div > div > div > div.card-content > div > div {
+    margin-top: 0.4rem;
+  }
+
+  #collapsibleCandidate > li > div.collapsible-body > div > div > div > div.card-action > a {
+    font-size: 12px;
+    line-height: 25px;
+    height: 25px;
+    padding: 0 10px;
+  }
+  a.btn, .btn, .btn-large, .btn-small, .btn-floating, .btn-large, .btn-small, .btn-flat {
+    font-size: 11px !important;
+  }
+  #collapsibleQuestions > li > div.collapsible-header > span, #collapsibleQuestions > li > div.collapsible-body > span, #collapsibleTrackMember > li > div.collapsible-body > div > div > div > div > div > div > a {
+    font-size: 12px;
+    padding: 0 10px;
+    line-height: 25px;
+    height: 25px;
+  }
+  #collapsibleCandidate > li > div.collapsible-body > div > div > div > div.card-image > h6 {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 200px) and (max-width: 1024px) {
+  div.header-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 16.5% !important;
+  }
+  /* about pmgc */
+  div.about-pmgc h4.center-align.white-text.animated.slideInLeft {
+    top: 20%;
+  }
+}
+
+@media only screen and (min-width: 240px) and (max-width: 370px) {
+  html, body {
+    font-size: 12px !important;
+  }
+  div.registerCandidate > div.registrationPanel > div > div.col.s12.m8.white.offset-m1 {
+    margin-top: 1rem !important;
+  }
+  .carousel {
+    height: 204px !important
+  }
+  div.about-pmgc .arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #263238;
+    position: absolute;
+    left: 7.5% !important;
+}
+}
+
+@media only screen and (min-width: 630px) and (max-width: 770px) {
+  div.header-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 16% !important;
+  }
+  div.registerCandidate > div.registrationPanel > div > div.col.s12.m8.white.offset-m1 {
+    margin-top: 1rem !important;
+  }
+  div.navbar > nav > div > ul > li > a.btn, #app > div > div.navbar > nav > div li > a.btn {
+    padding: 0 6px !important;
+}
+  h4 {
+    font-size: 1.78rem !important;
+  }
+  div.index-page div.white-text.darken-3 {
+    /* margin-top: -87% !important; */
+  }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 500px) {
+ .carousel {
+   height: 204px !important;
+ }
+ a.btn, .btn, .btn-large, .btn-small, .btn-floating, .btn-large, .btn-small, .btn-flat {
+    font-size: 11px !important;
+}
+}
+
+@media only screen and (max-width: 800px) {
+  body > small#browserText {
+    display: block !important;
+  }
+}
+@media only screen and (max-width: 992px) {
+  header, main, footer#adminFooter {
+    padding-left: 0px !important;
+  }
+}
+
+/* desktop device */

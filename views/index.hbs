@@ -1,0 +1,816 @@
+<h5 class="flow-text">
+  Kindly select from the following construction materials for computation:
+</h5>
+
+<div class="row">
+<div class="p text-center center-align"><a class="btn bold grey darken-1 white-text" onclick="computeTotalEev()">Compute Total (Embodied Energy Coefficient)</a></div>
+ <div class="card col s6">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="../public/images/steel reignforcements.jpg" width="275px" height="183px">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4 bold">Steel Reinforcement<i class="icon ion-android-checkbox-blank right"></i></span>
+      <p><a>Embedded Energy Value: </a> <a class="eVal">0</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Steel Reinforcement<i class="icon ion-android-cancel right"></i></span>
+      <i>Type:</i>
+<small class="red-text"><i>You must select the type of materials first before you input the quantity!</i></small>
+      <form>
+        <p>
+          <label>
+            <input name="group1" type="radio" id="virgin" onchange="sRType(this)" value="virgin"/>
+            <span title="Embodied Energy Coefficient (32 MJ)">Virgin
+              &nbsp;
+              <div class="col s12">
+                <span class="badge bold blue white-text">32 <small class="unit">(MJ)</small></span>
+                <div class="input-field col s4">
+                  <input id="virginNo" type="number" class="validate" onchange="computedSR(this)">
+                  <label for="virginNo">Quantity</label>
+                </div>
+              </div>
+            </span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio"  id="galvanised" onchange="sRType(this)" value="galvanised"/>
+            <span title="Embodied Energy Coefficient (34.8 MJ)">Galvanised</span>
+            &nbsp;
+            <div class="col s12">
+              <span class="badge bold">34.8 <small class="unit">(MJ)</small></span>
+              <div class="input-field col s4">
+                <input id="galvanisedNo" type="number" class="validate" onchange="computedSR(this)">
+                <label for="galvanisedNo">Quantity</label>
+              </div>
+            </div>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input class="with-gap" name="group1" type="radio" id="imported" onchange="sRType(this)"  value="imported"/>
+            <span title="Embodied Energy Coefficient (35 MJ)">Imported</span>
+            &nbsp;
+            <div class="col s12">
+              <span class="badge bold">35 <small class="unit">(MJ)</small></span>
+              <div class="input-field col s4">
+                <input id="importedNo" type="number" class="validate" onchange="computedSR(this)">
+                <label for="importedNo">Quantity</label>
+              </div>
+            </div>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" id="recycled" onchange="sRType(this)" value="recycled" />
+            <span title="Embodied Energy Coefficient (10.1 MJ)">Recycled</span>
+            &nbsp;
+            <div class="col s12">
+              <span class="badge bold">10.1 <small class="unit">(MJ)</small></span>
+              <div class="input-field col s4">
+                <input id="recycledNo" type="number" class="validate" onchange="computedSR(this)">
+                <label for="recycledNo">Quantity</label>
+              </div>
+            </div>
+          </label>
+          </p>
+      </form>
+    </div>
+  </div>   
+ <div class="card col s6">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="../public/images/cement.jpg" width="275px" height="183px">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4 bold">Cement<i class="icon ion-android-checkbox-blank right"></i></span>
+      <p><a>Embedded Energy Value: </a> <a class="eVal">0</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Cement<i class="icon ion-android-cancel right"></i></span>
+      <i>Type:</i>
+<small class="red-text"><i>You must select the type of materials first before you input the quantity!</i></small>
+      <form action="">
+        <p>
+          <label>
+            <input name="group1" type="radio" id="cement" onchange="cementType(this)" value="cement"/>
+            <span title="Embodied Energy Coefficient (7.8 MJ)">Cement
+              &nbsp;
+              <div class="col s12">
+                <span class="badge bold">7.8 <small class="unit">(MJ)</small></span>
+                <div class="input-field col s4">
+                  <input id="cementNo" type="number" class="validate" onchange="computedCement(this)">
+                  <label for="cementNo">Quantity</label>
+                </div>
+              </div>
+            </span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" id="cementMortar" onchange="cementType(this)" />
+            <span title="Embodied Energy Coefficient (2 MJ)">Cement Mortar</span>
+            &nbsp;
+            <div class="col s12">
+              <span class="badge bold">2 <small class="unit">(MJ)</small></span>
+              <div class="input-field col s4">
+                <input id="cementMortarNo" type="number" class="validate" onchange="computedCement(this)">
+                <label for="cementMortarNo">Quantity</label>
+              </div>
+            </div>
+          </label>
+        </p>
+      </form>
+    </div>
+  </div>   
+ <div class="card col s6">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="../public/images/concrete.jpg" width="275px" height="183px">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4 bold">Concrete<i class="icon ion-android-checkbox-blank right"></i></span>
+      <p><a>Embedded Energy Value: </a> <a class="eVal">0</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Concrete<i class="icon ion-android-cancel right"></i></span>
+      <i>Type:</i>
+<small class="red-text"><i>You must select the type of materials first before you input the quantity!</i></small>
+      <form action="">
+        <p>
+          <label>
+            <input name="group1" type="radio" id="gRConcrete" onchange="concreteType(this)"/>
+            <span title="Embodied Energy Coefficient (7.6 MJ)">Glass Reinforced Concrete
+              &nbsp;
+              <div class="col s12">
+                <span class="badge bold">7.6 <small class="unit">(MJ)</small></span>
+                <div class="input-field col s4">
+                  <input id="grConcreteNo" type="number" class="validate" onchange="computedConcrete(this)">
+                  <label for="grConcreteNo">Quantity</label>
+                </div>
+              </div>
+            </span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" id="preCast" onchange="concreteType(this)" />
+            <span title="Embodied Energy Coefficient (2 MJ)">Pre cast</span>
+            &nbsp;
+            <div class="col s12">
+              <span class="badge bold">2 <small class="unit">(MJ)</small></span>
+              <div class="input-field col s4">
+                <input id="preCastNo" type="number" class="validate" onchange="computedConcrete(this)">
+                <label for="preCastNo">Quantity</label>
+              </div>
+            </div>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input class="with-gap" name="group1" type="radio" id="rMix" onchange="concreteType(this)" />
+            <span title="Embodied Energy Coefficient (1 MJ)">Ready mix 17.5Mpa</span>
+            &nbsp;
+            <div class="col s12">
+              <span class="badge bold">1 <small class="unit">(MJ)</small></span>
+              <div class="input-field col s4">
+                <input id="rMixNo" type="number" class="validate" onchange="computedConcrete(this)">
+                <label for="rMixNo">Quantity</label>
+              </div>
+            </div>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio"  id="thirtyMpa" onchange="concreteType(this)"/>
+            <span title="Embodied Energy Coefficient (1.3 MJ)">30Mpa</span>
+            &nbsp;
+            <div class="col s12">
+              <span class="badge bold">1.3 <small class="unit">(MJ)</small></span>
+              <div class="input-field col s4">
+                <input id="thirtyMpaNo" type="number" class="validate" onchange="computedConcrete(this)">
+                <label for="thirtyMpaNo">Quantity</label>
+              </div>
+            </div>
+          </label>
+          </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" id="fortyMpa" onchange="concreteType(this)"/>
+            <span title="Embodied Energy Coefficient (1.6 MJ)">40Mpa</span>
+            &nbsp;
+            <div class="col s12">
+              <span class="badge bold">1.6 <small class="unit">(MJ)</small></span>
+              <div class="input-field col s4">
+                <input id="fortyMpaNo" type="number" class="validate" onchange="computedConcrete(this)">
+                <label for="fortyMpaNo">Quantity</label>
+              </div>
+            </div>
+          </label>
+          </p>
+        <p>
+          <label>
+            <input name="group1" type="radio"  id="block" onchange="concreteType(this)"/>
+            <span title="Embodied Energy Coefficient (0.94 MJ)">Block</span>
+            &nbsp;
+            <div class="col s12">
+              <span class="badge bold">0.94 <small class="unit">(MJ)</small></span>
+              <div class="input-field col s4">
+                <input id="blockNo" type="number" class="validate" onchange="computedConcrete(this)">
+                <label for="blockNo">Quantity</label>
+              </div>
+            </div>
+          </label>
+          </p>
+        <p>
+          <label>
+            <input name="group1" type="radio"  id="brick" onchange="concreteType(this)"/>
+            <span title="Embodied Energy Coefficient (0.97 MJ)">Brick</span>
+            &nbsp;
+            <div class="col s12">
+              <span class="badge bold">0.97 <small class="unit">(MJ)</small></span>
+              <div class="input-field col s4">
+                <input id="brickNo" type="number" class="validate" onchange="computedConcrete(this)">
+                <label for="brickNo">Quantity</label>
+              </div>
+            </div>
+          </label>
+          </p>
+      </form>
+    </div>
+  </div>   
+ <div class="card col s6">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="../public/images/glass.jpg" width="275px" height="183px">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4 bold">Glass<i class="icon ion-android-checkbox-blank right"></i></span>
+      <p><a>Embedded Energy Value: </a> <a class="eVal">0</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Glass<i class="icon ion-android-cancel right"></i></span>
+      <i>Type:</i>
+<small class="red-text"><i>You must select the type of materials first before you input the quantity!</i></small>
+      <form action="">
+        <p>
+          <label>
+            <input name="group1" type="radio" id="float" onchange="glassType(this)"/>
+            <span title="Embodied Energy Coefficient (15.9 MJ)">Float
+              &nbsp;
+              <div class="col s12">
+                <span class="badge bold">15.9 <small class="unit">(MJ)</small></span>
+                <div class="input-field col s4">
+                  <input id="floatNo" type="number" class="validate" onchange="computedGlass(this)">
+                  <label for="floatNo">Quantity</label>
+                </div>
+              </div>
+            </span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" id="toughened" onchange="glassType(this)"/>
+            <span title="Embodied Energy Coefficient (26.2 MJ)">Toughenened</span>
+            &nbsp;
+            <div class="col s12">
+              <span class="badge bold">26.2 <small class="unit">(MJ)</small></span>
+              <div class="input-field col s4">
+                <input id="toughnenedNo" type="number" class="validate" onchange="computedGlass(this)">
+                <label for="toughnenedNo">Quantity</label>
+              </div>
+            </div>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input class="with-gap" name="group1" type="radio"  id="laminated" onchange="glassType(this)"/>
+            <span title="Embodied Energy Coefficient (16.3 MJ)">Laminated</span>
+            &nbsp;
+            <div class="col s12">
+              <span class="badge bold">16.3 <small class="unit">(MJ)</small></span>
+              <div class="input-field col s4">
+                <input id="laminatedNo" type="number" class="validate" onchange="computedGlass(this)">
+                <label for="laminatedNo">Quantity</label>
+              </div>
+            </div>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" id="tinted" onchange="glassType(this)" />
+            <span title="Embodied Energy Coefficient (14.9 MJ)">Tinted</span>
+            &nbsp;
+            <div class="col s12">
+              <span class="badge bold">14.9 <small class="unit">(MJ)</small></span>
+              <div class="input-field col s4">
+                <input id="tintedNo" type="number" class="validate" onchange="computedGlass(this)">
+                <label for="tintedNo">Quantity</label>
+              </div>
+            </div>
+          </label>
+          </p>
+      </form>
+    </div>
+  </div>   
+ <div class="card col s6">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="../public/images/paints.jpg" width="275px" height="183px">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4 bold">Paints<i class="icon ion-android-checkbox-blank right"></i></span>
+      <p><a>Embedded Energy Value: </a> <a class="eVal">0</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Paints<i class="icon ion-android-cancel right"></i></span>
+      <i>Type:</i>
+<small class="red-text"><i>You must select the type of materials first before you input the quantity!</i></small>
+      <form action="">
+        <p>
+          <label>
+            <input name="group1" type="radio" id="paints" onchange="paintsType(this)"/>
+            <span title="Embodied Energy Coefficient (90.4 MJ)">Paints</span>
+            &nbsp;
+            <div class="col s12">
+              <span class="badge bold">90.4 <small class="unit">(MJ)</small></span>
+              <div class="input-field col s4">
+                <input id="paintsNo" type="number" class="validate" onchange="computedPaints(this)">
+                <label for="paintsNo">Quantity</label>
+              </div>
+            </div>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input class="with-gap" name="group1" type="radio"  id="sBased" onchange="paintsType(this)"/>
+            <span title="Embodied Energy Coefficient (98.1 MJ)">Solvent based</span>
+            &nbsp;
+            <div class="col s12">
+              <span class="badge bold">98.1 <small class="unit">(MJ)</small></span>
+              <div class="input-field col s4">
+                <input id="sBasedNo" type="number" class="validate" onchange="computedPaints(this)">
+                <label for="sBasedNo">Quantity</label>
+              </div>
+            </div>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" id="wBased" onchange="paintsType(this)" />
+            <span title="Embodied Energy Coefficient (88.5 MJ)">Water based</span>
+            &nbsp;
+            <div class="col s12">
+              <span class="badge bold">88.5 <small class="unit">(MJ)</small></span>
+              <div class="input-field col s4">
+                <input id="wBasedNo" type="number" class="validate" onchange="computedPaints(this)">
+                <label for="wBasedNo">Quantity</label>
+              </div>
+            </div>
+          </label>
+          </p>
+      </form>
+    </div>
+  </div>      
+ <div class="card col s6">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="../public/images/bank-sand-and-gravel-houston-tx-77024.webp" width="275px" height="183px">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4 bold">Sand<i class="icon ion-android-checkbox-blank right"></i></span>
+      <p><a>Embedded Energy Value: </a> <a class="eVal">0</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Sand<i class="icon ion-android-cancel right"></i></span>
+      <i>Type:</i>
+<small class="red-text"><i>You must select the type of materials first before you input the quantity!</i></small>
+      <form action="">
+        <p>
+          <label>
+            <input name="group1" type="radio" id="sand" onchange="sandType(this)"/>
+            <span title="Embodied Energy Coefficient (0.1 MJ)">Sand
+              &nbsp;
+              <div class="col s12">
+                <span class="badge bold">0.1 <small class="unit">(MJ)</small></span>
+                <div class="input-field col s4">
+                  <input id="sandNo" type="number" class="validate" onchange="computedSand(this)">
+                  <label for="sandNo">Quantity</label>
+                </div>
+              </div>
+            </span>
+          </label>
+        </p>
+      </form>
+    </div>
+  </div>   
+ <div class="card col s6">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="../public/images/ceramic-new.jpg" width="275px" height="183px">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4 bold">Ceramics<i class="icon ion-android-checkbox-blank right"></i></span>
+      <p><a>Embedded Energy Value: </a> <a class="eVal">0</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Ceramics<i class="icon ion-android-cancel right"></i></span>
+      <i>Type:</i>
+<small class="red-text"><i>You must select the type of materials first before you input the quantity!</i></small>
+      <form action="">
+        <p>
+          <label>
+            <input name="group1" type="radio" id="pipe" onchange="ceramicType(this)"/>
+            <span title="Embodied Energy Coefficient (6.3 MJ)">Pipe
+              &nbsp;
+              <div class="col s12">
+                <span class="badge bold">6.3 <small class="unit">(MJ)</small></span>
+                <div class="input-field col s4">
+                  <input id="pipeNo" type="number" class="validate" onchange="computedCeramic(this)">
+                  <label for="pipeNo">Quantity</label>
+                </div>
+              </div>
+            </span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" id="tile" onchange="ceramicType(this)"/>
+            <span title="Embodied Energy Coefficient (2.5 MJ)">Tile</span>
+            &nbsp;
+            <div class="col s12">
+              <span class="badge bold">2.5 <small class="unit">(MJ)</small></span>
+              <div class="input-field col s4">
+                <input id="tileNo" type="number" class="validate" onchange="computedCeramic(this)">
+                <label for="tileNo">Quantity</label>
+              </div>
+            </div>
+          </label>
+        </p>
+      </form>
+    </div>
+  </div>   
+ <div class="card col s6">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="../public/images/timber-softwood.jpg" width="275px" height="183px">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4 bold">Timber (Softwood)<i class="icon ion-android-checkbox-blank right"></i></span>
+      <p><a>Embedded Energy Value: </a> <a class="eVal">0</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Timber (Softwood)<i class="icon ion-android-cancel right"></i></span>
+      <i>Type:</i>
+<small class="red-text"><i>You must select the type of materials first before you input the quantity!</i></small>
+      <form action="">
+        <p>
+          <label>
+            <input name="group1" type="radio" id="plywood" onchange="softwoodType(this)"/>
+            <span title="Embodied Energy Coefficient (10.4 MJ)">Plywood
+              &nbsp;
+              <div class="col s12">
+                <span class="badge bold">10.4 <small class="unit">(MJ)</small></span>
+                <div class="input-field col s4">
+                  <input id="plywoodNo" type="number" class="validate" onchange="computedSoftwood(this)">
+                  <label for="plywoodNo">Quantity</label>
+                </div>
+              </div>
+            </span>
+          </label>
+        </p>
+      </form>
+    </div>
+  </div>  
+  <div class="card col s6">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="../public/images/timber-hardwood.jpg" width="275px" height="183px">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4 bold">Timber (Hardwood)<i class="icon ion-android-checkbox-blank right"></i></span>
+      <p><a>Embedded Energy Value: </a> <a class="eVal">0</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Timber (Hardwood)<i class="icon ion-android-cancel right"></i></span>
+      <i>Type:</i>
+<small class="red-text"><i>You must select the type of materials first before you input the quantity!</i></small>
+      <form action="">
+        <p>
+          <label>
+            <input name="group1" type="radio" id="tHardwood" onchange="hardwoodType(this)"/>
+            <span title="Embodied Energy Coefficient (0.3 MJ)">Air dried, Roughsaw
+              &nbsp;
+              <div class="col s12">
+                <span class="badge bold">0.3 <small class="unit">(MJ)</small></span>
+                <div class="input-field col s4">
+                  <input id="hardwoodNo" type="number" class="validate" onchange="computedHardwood(this)">
+                  <label for="hardwoodNo">Quantity</label>
+                </div>
+              </div>
+            </span>
+          </label>
+        </p>
+      </form>
+    </div>
+  </div> 
+ <div class="card col s6">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="../public/images/Slider-Aggregates.jpg" width="275px" height="183px">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4 bold">Aggregates<i class="icon ion-android-checkbox-blank right"></i></span>
+      <p><a>Embedded Energy Value: </a> <a class="eVal">0</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Aggregates<i class="icon ion-android-cancel right"></i></span>
+      <i>Type:</i>
+<small class="red-text"><i>You must select the type of materials first before you input the quantity!</i></small>
+      <form action="">
+        <p>
+          <label>
+            <input name="group1" type="radio" id="aggregates" onchange="aggregatesType(this)"/>
+            <span title="Embodied Energy Coefficient (0.1 MJ)">Aggregates
+              &nbsp;
+              <div class="col s12">
+                <span class="badge bold">0.1 <small class="unit">(MJ)</small></span>
+                <div class="input-field col s4">
+                  <input id="aggregatesNo" type="number" class="validate" onchange="computedAggregates(this)">
+                  <label for="aggregatesNo">Quantity</label>
+                </div>
+              </div>
+            </span>
+          </label>
+        </p>
+      </form>
+    </div>
+  </div>   
+ <div class="card col s6">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="../public/images/aluminium.jpg" width="275px" height="183px">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4 bold">Aluminium<i class="icon ion-android-checkbox-blank right"></i></span>
+      <p><a>Embedded Energy Value: </a> <a class="eVal">0</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Aluminium<i class="icon ion-android-cancel right"></i></span>
+      <i>Type:</i>
+<small class="red-text"><i>You must select the type of materials first before you input the quantity!</i></small>
+      <form action="">
+        <p>
+          <label>
+            <input name="group1" type="radio" id="alumRecycled" onchange="aluminiumType(this)"/>
+            <span title="Embodied Energy Coefficient (8.1 MJ)">Recycled
+              &nbsp;
+              <div class="col s12">
+                <span class="badge bold">8.1 <small class="unit">(MJ)</small></span>
+                <div class="input-field col s4">
+                  <input id="alumRecycledNo" type="number" class="validate" onchange="computedAluminium(this)">
+                  <label for="alumRecycledNo">Quantity</label>
+                </div>
+              </div>
+            </span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" id="alumExtruded" onchange="aluminiumType(this)"/>
+            <span title="Embodied Energy Coefficient (17.3 MJ)">Extruded</span>
+            &nbsp;
+            <div class="col s12">
+              <span class="badge bold">17.3 <small class="unit">(MJ)</small></span>
+              <div class="input-field col s4">
+                <input id="extrudedNo" type="number" class="validate" onchange="computedAluminium(this)">
+                <label for="extrudedNo">Quantity</label>
+              </div>
+            </div>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input class="with-gap" name="group1" type="radio"  id="alumEFP" onchange="aluminiumType(this)"/>
+            <span title="Embodied Energy Coefficient (34.3 MJ)">Extruded, Factory painted</span>
+            &nbsp;
+            <div class="col s12">
+              <span class="badge bold">34.3 <small class="unit">(MJ)</small></span>
+              <div class="input-field col s4">
+                <input id="alumEFPNo" type="number" class="validate" onchange="computedAluminium(this)">
+                <label for="alumEFPNo">Quantity</label>
+              </div>
+            </div>
+          </label>
+        </p>
+      </form>
+    </div>
+  </div>   
+</div>
+<script src="../public/js/jquery.min.js"></script>
+<script>
+  $(document).ready(() => {
+    $(`body > div > div > div > div.card-reveal > form > div > span`).addClass('blue white-text')
+  
+  })
+  
+  let quantSR, quantCement, quantConcrete, quantGlass, quantPaints, quantSand, quantCeramic, quantSoftwood, quantHardwood, quantAggregates, quantAluminium
+  let sRTypeId, cementTypeId, concreteTypeId, glassTypeId, paintsTypeId, sandTypeId, ceramicTypeId, softwoodTypeId, hardwoodTypeId, aggregatesTypeId, alumTypeId
+  let allEev = []
+  let total = 0
+  // let inputSelect = $()
+  let sRType = (e) => {
+    sRTypeId = e.value
+    quantSR = e.nextElementSibling
+    return e
+    // console.log({e: e.parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[1].children[1].text})
+  }
+  let computedSR = (e) => {
+    if (!sRTypeId) {
+      alert('You must select the type of Steel Reinforcement first!')
+    } else {
+      allEev.push(e.value * (parseFloat(quantSR.title.split('(')[1].split(')')[0].split(' ')[0])).toFixed(2))
+      let eVal = e.value * (parseFloat(quantSR.title.split('(')[1].split(')')[0].split(' ')[0])).toFixed(2) + ' MJ/KG'
+      console.log({'Embedded Energy': eVal})
+      // console.log(sRType(e).nextElementSibling)
+      sRType(e).parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[1].children[1].text = eVal
+      // console.log(sRType(e).parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[0].children[0].outerHTML)
+      sRType(e).parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[0].children[0].outerHTML = `<i class="icon ion-android-checkbox right"></i>`
+    }
+  }
+
+  let cementType = (e) => {
+    cementTypeId = e.value
+    quantCement = e.nextElementSibling
+    return e
+  }
+  let computedCement = (e) => {
+    if (!cementTypeId) {
+      alert('You must select the type of material first!')
+    } else {
+      allEev.push(e.value * (parseFloat(quantCement.title.split('(')[1].split(')')[0].split(' ')[0])).toFixed(2))
+      let eVal = e.value * (parseFloat(quantCement.title.split('(')[1].split(')')[0].split(' ')[0])).toFixed(2) + ' MJ/KG'
+      console.log({'Embedded Energy': eVal})
+      cementType(e).parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[1].children[1].text = eVal
+      cementType(e).parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[0].children[0].outerHTML = `<i class="icon ion-android-checkbox right"></i>`
+    }
+  }
+
+  let concreteType = (e) => {
+    concreteTypeId = e.value
+    quantConcrete = e.nextElementSibling
+    return e
+  }
+  let computedConcrete = (e) => {
+    if (!concreteTypeId) {
+      alert('You must select the type of material first!')
+    } else {
+     allEev.push(e.value * (parseFloat(quantConcrete.title.split('(')[1].split(')')[0].split(' ')[0])).toFixed(2))
+      let eVal = e.value * (parseFloat(quantConcrete.title.split('(')[1].split(')')[0].split(' ')[0])).toFixed(2) + ' MJ/KG'
+      console.log({'Embedded Energy': eVal})
+      concreteType(e).parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[1].children[1].text = eVal
+      concreteType(e).parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[0].children[0].outerHTML = `<i class="icon ion-android-checkbox right"></i>`
+    }
+  }
+
+  let glassType = (e) => {
+  glassTypeId = e.value
+    quantGlass = e.nextElementSibling
+    return e
+  }
+  let computedGlass = (e) => {
+    if (!glassTypeId) {
+      alert('You must select the type of material first!')
+    } else {
+      allEev.push(e.value * (parseFloat(quantGlass.title.split('(')[1].split(')')[0].split(' ')[0])).toFixed(2))
+      let eVal = e.value * (parseFloat(quantGlass.title.split('(')[1].split(')')[0].split(' ')[0])).toFixed(2) + ' MJ/KG'
+      console.log({'Embedded Energy': eVal})
+      glassType(e).parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[1].children[1].text = eVal
+      glassType(e).parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[0].children[0].outerHTML = `<i class="icon ion-android-checkbox right"></i>`
+    }
+  }
+
+  let paintsType = (e) => {
+    paintsTypeId = e.value
+    quantPaints = e.nextElementSibling
+    return e
+  }
+  let computedPaints = (e) => {
+    if (!paintsTypeId) {
+      alert('You must select the type of material first!')
+    } else {
+      allEev.push(e.value * (parseFloat(quantPaints.title.split('(')[1].split(')')[0].split(' ')[0])).toFixed(2))
+      let eVal = e.value * (parseFloat(quantPaints.title.split('(')[1].split(')')[0].split(' ')[0])).toFixed(2) + ' MJ/KG'
+      console.log({'Embedded Energy': eVal})
+      paintsType(e).parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[1].children[1].text = eVal
+      paintsType(e).parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[0].children[0].outerHTML = `<i class="icon ion-android-checkbox right"></i>`
+    }
+  }
+
+  let sandType = (e) => {
+    sandTypeId = e.value
+    quantSand = e.nextElementSibling
+    return e
+  }
+  let computedSand = (e) => {
+    if (!sandTypeId) {
+      alert('You must select the type of material first!')
+    } else {
+      allEev.push(e.value * (parseFloat(quantSand.title.split('(')[1].split(')')[0].split(' ')[0])).toFixed(2))
+      let eVal = e.value * (parseFloat(quantSand.title.split('(')[1].split(')')[0].split(' ')[0])).toFixed(2) + ' MJ/KG'
+      console.log({'Embedded Energy': eVal})
+      sandType(e).parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[1].children[1].text = eVal
+      sandType(e).parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[0].children[0].outerHTML = `<i class="icon ion-android-checkbox right"></i>`
+    }
+  }
+
+  let ceramicType = (e) => {
+    ceramicTypeId = e.value
+    quantCeramic = e.nextElementSibling
+    return e
+  }
+  let computedCeramic = (e) => {
+    if (!ceramicTypeId) {
+      alert('You must select the type of material first!')
+    } else {
+      allEev.push(e.value * (parseFloat(quantCeramic.title.split('(')[1].split(')')[0].split(' ')[0])).toFixed(2))
+      let eVal = e.value * (parseFloat(quantCeramic.title.split('(')[1].split(')')[0].split(' ')[0])).toFixed(2) + ' MJ/KG'
+      console.log({'Embedded Energy': eVal})
+      ceramicType(e).parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[1].children[1].text = eVal
+      ceramicType(e).parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[0].children[0].outerHTML = `<i class="icon ion-android-checkbox right"></i>`
+    }
+  }
+
+  let softwoodType = (e) => {
+    softwoodTypeId = e.value
+    quantSoftwood = e.nextElementSibling
+    return e
+  }
+  let computedSoftwood = (e) => {
+    if (!softwoodTypeId) {
+      alert('You must select the type of material first!')
+    } else {
+      allEev.push(e.value * (parseFloat(quantSoftwood.title.split('(')[1].split(')')[0].split(' ')[0])).toFixed(2))
+      let eVal = e.value * (parseFloat(quantSoftwood.title.split('(')[1].split(')')[0].split(' ')[0])).toFixed(2) + ' MJ/KG'
+      console.log({'Embedded Energy': eVal})
+      softwoodType(e).parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[1].children[1].text = eVal
+      softwoodType(e).parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[0].children[0].outerHTML = `<i class="icon ion-android-checkbox right"></i>`
+    }
+  }
+
+  let hardwoodType = (e) => {
+    hardwoodTypeId = e.value
+    quantHardwood = e.nextElementSibling
+    return e
+  }
+  let computedHardwood = (e) => {
+    if (!hardwoodTypeId) {
+      alert('You must select the type of material first!')
+    } else {
+      allEev.push(e.value * (parseFloat(quantHardwood.title.split('(')[1].split(')')[0].split(' ')[0])).toFixed(2))
+      let eVal = e.value * (parseFloat(quantHardwood.title.split('(')[1].split(')')[0].split(' ')[0])).toFixed(2) + ' MJ/KG'
+      console.log({'Embedded Energy': eVal})
+      hardwoodType(e).parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[1].children[1].text = eVal
+      hardwoodType(e).parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[0].children[0].outerHTML = `<i class="icon ion-android-checkbox right"></i>`
+    }
+  }
+
+  let aggregatesType = (e) => {
+    aggregatesTypeId = e.value
+    quantAggregates = e.nextElementSibling
+    return e
+  }
+  let computedAggregates = (e) => {
+    if (!aggregatesTypeId) {
+      alert('You must select the type of material first!')
+    } else {
+      let eVal = e.value * (parseFloat(quantAggregates.title.split('(')[1].split(')')[0].split(' ')[0])).toFixed(2) + ' MJ/KG'
+      allEev.push(parseFloat(e.value * (parseFloat(quantAggregates.title.split('(')[1].split(')')[0].split(' ')[0])).toFixed(2)))
+      console.log({'Embedded Energy': eVal})
+      aggregatesType(e).parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[1].children[1].text = eVal
+      aggregatesType(e).parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[0].children[0].outerHTML = `<i class="icon ion-android-checkbox right"></i>`
+    }
+  }
+
+  let aluminiumType = (e) => {
+    aluminiumTypeId = e.value
+    quantAluminium = e.nextElementSibling
+    return e
+  }
+  let computedAluminium = (e) => {
+    if (!aluminiumTypeId) {
+      alert('You must select the type of material first!')
+    } else {
+      allEev.push(e.value * (parseFloat(quantAluminium.title.split('(')[1].split(')')[0].split(' ')[0])).toFixed(2))
+      let eVal = e.value * (parseFloat(quantAluminium.title.split('(')[1].split(')')[0].split(' ')[0])).toFixed(2) + ' MJ/KG'
+      console.log({'Embedded Energy': eVal})
+      aluminiumType(e).parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[1].children[1].text = eVal
+      aluminiumType(e).parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[0].children[0].outerHTML = `<i class="icon ion-android-checkbox right"></i>`
+    }
+  }
+
+  let computeTotalEev = () => {
+    if (allEev.length <= 0) alert("You must select construction materials for computation!")
+    else {
+      console.log({allEev})
+      for (let x = 0; x < allEev.length; x++) {
+        total+=parseFloat(allEev[x])
+      }
+      console.log({total})
+      // console.log($(`body > div > div > div.p.text-center.center-align > a.bold.grey.white-text`)[0].innerText)
+      $(`body > div > div > div.p.text-center.center-align > a.bold.grey.white-text`)[0].innerText = `Total Embodied Energy Coefficient = ${total} MJ/KG`
+      $(`body > div > div > div.p.text-center.center-align > a.bold.grey.white-text`)[0].addClass('red')
+      alert(`The Total Embodied Energy Coefficient equals: \t ${total} MJ/KG`)
+    }
+  }
+</script>
